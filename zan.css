@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #b08357;
+  /* Цвет фона страницы */
+}
+
+nav {
+  background-color: #343a40;
+  /* Цвет фона навигационной панели */
+}
+
+.navbar-brand,
+.nav-link {
+  color: #888888;
+  /* Цвет текста в навигации */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff;
+  /* Цвет иконки переключателя навигации */
+}
+
+
+.popa {
+  position: relative;
+  width: 1024px;
+  height: 150px;
+  margin: 20px auto;
+  /* Центрирование блока по центру страницы */
+  background-color: #ffffff;
+  /* Цвет фона блока */
+  box-shadow: 0 0 10px #3e2616;
+  /* Тень блока */
+  border-radius: 10px;
+  /* Скругленные углы блока */
+  overflow: hidden;
+  /* Прятать лишний контент вне блока */
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.col-md-10{
+  padding: 20px;
+  /*background-color:#ffefd5;*/
+  border-radius:20px;
+}
+
+.content{
+  padding: 35px;
+  margin: 20px;
+  color:rgb(0, 0, 0);
+  text-align: justify;
+  border-radius:10px;
+  box-shadow: 0 0 5px #3e2616;
+  background-color:#ffefd5;
+  
+}
+.content a{
+  color:#683f26;
+  font-weight: bold;
+}
+.content a:hover{
+  color:#6e5b4e;
+  font-weight: bold;
+}
+
+.content p{
+  padding: 10px;
+  font-size: 1.2pc;
+}
+.content h1{
+  color:#53331f;
+}
+.content audio{
+  color:#683f26;
+  display: block; /* Устанавливаем изображение как блочный элемент */
+  margin: auto; /* Центрируем по горизонтали */
+}
+.content img {
+  display: block; /* Устанавливаем изображение как блочный элемент */
+  margin: auto; /* Центрируем по горизонтали */
+  padding-top: 10px;
+}
+.content em{
+  color: #683f26;
+}

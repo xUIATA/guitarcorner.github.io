@@ -1,0 +1,148 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    
+  }
+  .full-height {
+    height: 100%;
+  }
+.tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab {
+  margin: 10px;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #FAE7B5;
+}
+.tab:hover {
+  box-shadow: 0 0 8px #3e2616;
+  background-color:#fbf1d6;
+}
+/*nav {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  z-index: 1000;
+}
+.container-fluid{
+  background-color: #5a4e42;
+}
+.container-fluid a{
+  color:white;
+}*/
+.navbar-brand,
+.nav-link {
+  color: #888888;
+  margin: auto;
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff;
+  /* Цвет иконки переключателя навигации */
+}
+.navbar{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 55px;
+}
+.navbar p{
+  margin: auto;
+  color: #888888;
+}
+.col-md-2 {
+  background-color: #b08357;
+  position: fixed;
+  top: 55px; /* Учитывая высоту навигационной панели */
+  left: 0;
+  height: 100%;
+  width: 250px; /* Ширина левой панели */
+  z-index: 999;
+}
+
+.col-md-10 {
+  background-color: #FAE7B5;
+  margin-left: 250px; /* Учитывая ширину левой панели */
+  padding-top: 70px; /* Учитывая высоту навигационной панели */
+  width: calc(100% - 250px); /* Ширина правой части */
+  z-index: 998; /* Немного уменьшим z-index, чтобы .col-md-10 не перекрывал .nav */
+}
+#metronome {
+  position: relative;
+  z-index: 1;
+  margin-right: 50%;
+}
+
+#metronome-toggle{
+  background-color: transparent; /* Прозрачный фон */
+  border: none; /* Убираем границу */
+  outline: none; /* Убираем контур */
+  cursor: pointer; /* Показываем, что это кликабельный элемент */
+}
+
+#metronome-menu {
+  display: none;
+  position: absolute;
+  left: -10px; /* Чуть сместим влево */
+  top: 50px; /* Отступ сверху */
+  width: 160px; /* Увеличим ширину меню */
+  background-color: #b08357;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+#metronome-menu .col-md-6 {
+  width: 100%; /* Заполним всю доступную ширину */
+}
+
+#metronome-menu input[type="number"] {
+  width: calc(100%); /* Заполним всю доступную ширину с учетом отступов */
+  padding: 8px;
+  text-align: center;
+  border: none; /* Уберем границу */
+  border-radius: 5px;
+  margin-bottom: 10px; /* Отступ снизу */
+  background-color: #f0f0f0; /* Цвет фона */
+}
+#metronome-menu p{
+
+}
+#metronome-menu button {
+  width: 100%; /* Заполним всю доступную ширину */
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color:#FAE7B5;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+#metronome-menu button:hover {
+  background-color:#fbf1d6;
+  box-shadow: 0 0 8px #3e2616;
+}
+
+#metronome-menu img {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+#metronome-menu img:hover {
+  transform: scale(1.1); /* Увеличим размер при наведении */
+}
+.col-md-10 h2{
+  padding: 5px;
+}

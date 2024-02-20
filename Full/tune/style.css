@@ -1,0 +1,321 @@
+html {
+  height: 100%;
+}
+.navbar-brand,
+.nav-link {
+  color: #888888;
+  /* Цвет текста в навигации */
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff;
+  /* Цвет иконки переключателя навигации */
+}
+
+body {
+  font-family: sans-serif;
+  color: #000000; /* Белый цвет текста на тёмном фоне */
+  background-color: #FAE7B5; 
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  user-select: none;
+}
+.cont {
+  width: 80%;
+  padding-top: 60px;
+}
+.notes {
+  margin: auto;
+  width: 400px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #000000; /* Белый цвет текста на тёмном фоне */
+}
+.vertical-line {
+  border-left: 4px solid transparent; /* Левая сторона треугольника */
+  border-right: 4px solid transparent; /* Правая сторона треугольника */
+  border-bottom: 200px solid rgba(103, 255, 2, 0.464);
+  transform-origin: bottom;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: -1;
+  left: 5px;
+  bottom: 5px;
+  transform: translateX(-50%);
+}
+.note {
+  font-size: 90px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  padding-right: 30px;
+  padding-left: 10px;
+  color: #D5713F; /* Белый цвет текста на тёмном фоне */
+}
+
+.note.active {
+  text-shadow: 0 0 5px #828282; 
+}
+.note.active:hover{
+  text-shadow: 0 0 20px #FF7F50; 
+}
+
+.notes-list {
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  -webkit-mask-image: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0),
+    #fff,
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.notes-list::-webkit-scrollbar {
+  display: none;
+}
+
+.note {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.note span {
+  position: absolute;
+  right: 0.25em;
+  font-size: 40%;
+  font-weight: normal;
+}
+
+.note-sharp {
+  top: 0.3em;
+}
+
+.note-octave {
+  bottom: 0.3em;
+}
+
+.frequency {
+  font-size: 32px;
+  color: #000000;
+}
+
+.frequency span {
+  font-size: 50%;
+  margin-left: 0.25em;
+}
+
+.meter {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 50%;
+  width: 400px;
+  height: 29%;
+  margin: 0 auto 5vh auto;
+}
+
+.meter-pointer {
+  width: 2px;
+  height: 100%;
+  background: #0a0a0a; 
+  transform: rotate(45deg);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+  position: absolute;
+  right: 50%;
+}
+
+.meter-dot {
+  width: 10px;
+  height: 10px;
+  background: #000000;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -5px;
+  right: 50%;
+  margin-right: -4px;
+}
+
+.meter-scale {
+  width: 1px;
+  height: 100%;
+  transform-origin: bottom;
+  transition: transform 0.2s;
+  box-sizing: border-box;
+  border-top: 10px solid;
+  position: absolute;
+  right: 50%;
+}
+
+.meter-scale-strong {
+  width: 2px;
+  border-top-width: 20px;
+}
+
+.frequency-bars {
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+}
+
+.swal-button {
+  background: #373c3d; /* Белый цвет на тёмном фоне */
+}
+
+.a4 {
+  position: right;
+  top: 16px;
+  padding-left: 16px;
+  display: none;
+}
+
+.a4 span {
+  color: #e74c3c;
+}
+
+.auto {
+  position: right;
+  top: 16px;
+  padding-left: 16px;
+}
+input[type="checkbox"] {
+  top: 7px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: #7c6a52;
+  border: 2px solid #FAD6A5;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]::before {
+  content: '\2713'; /* Галочка Unicode */
+  font-size: 16px;
+  color: #fff; /* Белый цвет галочки */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Изначально скрываем галочку */
+}
+
+input[type="checkbox"]:checked::before {
+  opacity: 1; /* Показываем галочку, когда чекбокс отмечен */
+}
+#tuning-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#form-select{
+  display: none;
+}
+@media (max-width: 768px) {
+  .meter {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    position: flex;
+    display: flex;
+    z-index: -1;
+    margin-top: 100px;
+  }
+  .cont{display: flex; }
+  .list_stroi{
+    display: none;
+  }
+  #form-select{
+    display: flex;
+  }
+  .notes {
+    width: 100%;
+  }
+  .meter-pointer{position: flex;}
+  .meter-dot{position: flex;}
+  .meter-scale{position: flex;}
+  .meter-scale-strong{position: flex;}
+  .cont{position: flex;display: flex;}
+  .meter .meter-dot .vertical-line {
+    border-bottom: 100px solid rgb(103, 255, 2)!important;
+  }
+
+}
+.list_stroi {
+  position: flex;
+  width: 20%;
+  height: 60%;
+  margin-top: -20px;
+  margin-left: 79%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.list-group {
+  list-style: none;
+  padding: 0;
+}
+.list-group-item {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.hidden {
+  display: none;
+}
+sub{
+  font-weight: bold;
+  color:#000000;
+}
+
+.trapezoid {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.trapezoid:before, .trapezoid:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.trapezoid:before {
+  left: 0;
+  border-width: 100px 100px 0 0;
+  border-color: #4caf4f transparent transparent transparent;
+}
+.trapezoid:after {
+  right: 0;
+  border-width: 0 0 100px 100px;
+  border-color: transparent transparent #4CAF50 transparent;
+}
+/*.meter {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 29%; 
+  background-color: rgba(211, 211, 211, 0); 
+}*/
+
+
+
+.container text-center{
+  align-items: center;
+}

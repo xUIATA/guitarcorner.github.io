@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <title>Табулатуры</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="tabs.html">Табулатуры</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Переключатель навигации" onclick="f1()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="test2.html">Ознакомительноe занятие</a>
+          <a class="nav-link" href="tune.html">Тюнер</a>
+        </div>
+        <div id="metronome">
+          <button id="metronome-toggle"><img src="Full/tabs/метроном.png" alt="Metronome" width="40px" height="40px"></button>
+          <div id="metronome-menu">
+            <div class="col-md-6">
+              <input type="number" id="tempo-input" placeholder="Темп" value="120">
+            </div>
+            <div class="col-md-6">
+              <button id="start-stop-button"><img src="Full/tabs/пуск.png" alt="Play"></button>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid full-height">
+    <div class="row full-height">
+      <div class="col-md-2">
+        <ul class="tabs">
+          <li class="tab" onclick="changeContent('Full/tabs/ARPEGGIOPRACTICE.pdf', 'Full/tabs/ARPEGGIOPRACTICE.mp3')">
+            Упражнение арпеджио</li>
+          <li class="tab" onclick="changeContent('Full/tabs/seven_nation_army.pdf', 'Full/tabs/seven_nation_army.mp3')">
+            Seven nation army</li>
+        </ul>
+
+      </div>
+      <div class="col-md-10 position-relative p-100">
+        <figure>
+        <h2>Прослушайте произведение: </h2>
+          <audio controls id="audioPlayer" src="Full/tabs/ARPEGGIOPRACTICE.mp3">
+            <a href="Full/tabs/ARPEGGIOPRACTICE.mp3"> </a>
+          </audio>
+        </figure>
+        <iframe id="pdfViewer" src="Full/tabs/ARPEGGIOPRACTICE.pdf" width="100%" height="800px"
+          allow="autoplay"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="Full/tabs/tabScript.js"></script>
+  <link rel="stylesheet" href="Full/tabs/tabindex.css" />
+  <!-- Подключаем Bootstrap JS (необходим для работы некоторых компонентов) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aubiojs@0.1.1/build/aubio.min.js"></script>
+</body>
+
+</html>
