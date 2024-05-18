@@ -13,13 +13,19 @@ document.addEventListener("DOMContentLoaded", function() {
     metronomeMenu.style.display = metronomeMenu.style.display === "block" ? "none" : "block";
   });
 
+  // Обработчик изменения значения темпа
+  tempoInput.addEventListener("input", function() {
+    const tempo = parseInt(tempoInput.value);
+    // Если метроном запущен, обновляем его темп
+    if (startStopButton.dataset.running === "true") {
+      stopMetronome();
+      startMetronome(tempo);
+    }
+  });
+
   // Запустить/остановить метроном
   startStopButton.addEventListener("click", function() {
     const tempo = parseInt(tempoInput.value);
-    if (isNaN(tempo)) {
-      alert("Please enter a valid tempo.");
-      return;
-    }
     if (startStopButton.dataset.running === "true") {
       stopMetronome();
     } else {
@@ -43,4 +49,27 @@ document.addEventListener("DOMContentLoaded", function() {
     startStopButton.innerHTML = "<img src='Full/tabs/пуск.png' alt='Play'>";
     clearInterval(metronomeInterval);
   }
+});
+
+function changeStarColor(stars) {
+  var starElements = document.querySelectorAll('#stars');
+  
+  starElements.forEach(function(starElement) {
+      var starsCount = starElement.innerHTML.length;
+      
+      if (starsCount === 1) {
+          starElement.style.color = 'green'; // салатовый
+      } else if (starsCount === 2) {
+          starElement.style.color = 'orange'; // желтый
+      } else if (starsCount === 3) {
+          starElement.style.color = '#FF8C00'; // оранжевый
+      } else if (starsCount === 4) {
+          starElement.style.color = 'red'; // красный
+      }
+  });
+}
+
+// Вызываем функцию при загрузке страницы для начального установления цветов звезд
+document.addEventListener('DOMContentLoaded', function() {
+  changeStarColor();
 });

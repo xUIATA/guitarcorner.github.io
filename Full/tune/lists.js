@@ -33,10 +33,10 @@ function changeTuning() {
     }
   }
   
-var i = 0;
+/*var i = 0;
 function f1(){
   i++;
   if(i%2) {var tune = document.getElementById("cont1");
   cont1.style.display = "none";}
   else  cont1.style.display = "flex";
-}
+}*/

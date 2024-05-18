@@ -6,10 +6,24 @@ html {
   color: #888888;
   /* Цвет текста в навигации */
 }
-
+.navbar-brand,
+.nav-link {
+  color: #6a4d17;
+}
 .navbar-toggler-icon {
-  background-color: #ffffff;
-  /* Цвет иконки переключателя навигации */
+  /*background-color: #6a4d17;
+   Цвет иконки переключателя навигации */
+}
+.navbar {
+  background-color: #d6b984a3 !important; /* Цвет фона навигационной панели */
+}
+.navbar-brand,
+.nav-link:hover{
+  color:#000000dc;
+}
+.navbar-toggler-icon {
+   /*background-color: #d6b984a3;
+  Цвет иконки переключателя навигации */
 }
 
 body {
@@ -241,6 +255,7 @@ input[type="checkbox"]:checked::before {
   #form-select{
     display: flex;
   }
+  
   .notes {
     width: 100%;
   }
@@ -252,6 +267,34 @@ input[type="checkbox"]:checked::before {
   .meter .meter-dot .vertical-line {
     border-bottom: 100px solid rgb(103, 255, 2)!important;
   }
+/* Стили для селекта */
+.form-select {
+  color: #333; /* Цвет текста */
+  background-color: #d6b984a3; /* Цвет фона */
+  border-color: #d6b984a3 !important; /* Цвет границы */
+
+  /* Добавление стиля при наведении */
+}
+.form-select:focus {
+  outline: none;
+  box-shadow: none;
+  border-color:none;
+}
+.form-select:hover {
+  background-color: #ccbc9fa3; /* Изменение цвета фона при наведении */
+}
+
+/* Стили для опций селекта */
+.form-select option {
+  color: #333; /* Цвет текста опции */
+  background-color: #d6b984a3; /* Цвет фона опции */
+  border-color: #d6b984a3;
+  border-width: 1px;
+}
+.form-select option:hover {
+  background-color: #4f2e00 !important; /* Изменение цвета фона опции при наведении */
+  background-color: transparent;
+}
 
 }
 .list_stroi {
@@ -314,8 +357,16 @@ sub{
   background-color: rgba(211, 211, 211, 0); 
 }*/
 
-
-
+/*.form-select{
+  background-color:#d6b984a3;
+}
+.form-select:hover{
+  border-color: #9f8a62a3 !important;
+  border-width: 3px;
+}
+.form-select option:hover{
+  background-color:#d6b984a3;
+}*/
 .container text-center{
   align-items: center;
 }
