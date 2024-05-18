@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary ">
     <div class="container-fluid">
       <a class="navbar-brand" href="tabs.html">Табулатуры</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -22,17 +22,6 @@
           <a class="nav-link" href="test2.html">Ознакомительноe занятие</a>
           <a class="nav-link" href="tune.html">Тюнер</a>
         </div>
-        <div id="metronome">
-          <button id="metronome-toggle"><img src="Full/tabs/метроном.png" alt="Metronome" width="40px" height="40px"></button>
-          <div id="metronome-menu">
-            <div class="col-md-6">
-              <input type="number" id="tempo-input" placeholder="Темп" value="120">
-            </div>
-            <div class="col-md-6">
-              <button id="start-stop-button"><img src="Full/tabs/пуск.png" alt="Play"></button>
-            </div>
-          </div>
-        </div>  
       </div>
     </div>
   </nav>
@@ -41,23 +30,46 @@
     <div class="row full-height">
       <div class="col-md-2">
         <ul class="tabs">
-          <li class="tab" onclick="changeContent('Full/tabs/ARPEGGIOPRACTICE.pdf', 'Full/tabs/ARPEGGIOPRACTICE.mp3')">
-            Упражнение арпеджио</li>
-          <li class="tab" onclick="changeContent('Full/tabs/seven_nation_army.pdf', 'Full/tabs/seven_nation_army.mp3')">
-            Seven nation army</li>
+           <!-- <li class="tab" onclick="changeContent('Full/tabs/ARPEGGIOPRACTICE.pdf', 'Full/tabs/ARPEGGIOPRACTICE.mp3')">
+            Упражнение арпеджио <br><div id="stars">★</div>
+          </li> -->
+            <li class="tab" onclick="changeContent('Full/tabs/seven_nation_army.pdf', 'Full/tabs/seven_nation_army.mp3')">
+              Seven nation army <br><div id="stars">★</div></li>
+            <li class="tab" onclick="changeContent('Full/tabs/piraty.pdf', 'Full/tabs/piraty.mp3')">
+              Пираты Карибского моря <br><div id="stars">★★</div></li>
+            <li class="tab" onclick="changeContent('Full/tabs/lonely_day.pdf', 'Full/tabs/lonely_day.mp3')">
+              Lonely day <br><div id="stars">★★★</div></li>
+            <li class="tab" onclick="changeContent('Full/tabs/metallica-nothing_else_matters.pdf', 'Full/tabs/metallica-nothing_else_matters.mp3')">
+             Nothing else matters <br><div id="stars">★★★★</div></li>
         </ul>
 
       </div>
-      <div class="col-md-10 position-relative p-100">
-        <figure>
-        <h2>Прослушайте произведение: </h2>
-          <audio controls id="audioPlayer" src="Full/tabs/ARPEGGIOPRACTICE.mp3">
-            <a href="Full/tabs/ARPEGGIOPRACTICE.mp3"> </a>
-          </audio>
-        </figure>
-        <iframe id="pdfViewer" src="Full/tabs/ARPEGGIOPRACTICE.pdf" width="100%" height="800px"
-          allow="autoplay"></iframe>
-      </div>
+      <div class="col-md-10 position-relative p-100" style="display: flex; flex-direction: column;">
+        <div style="display: flex; align-items: center;">
+            <figure>
+                <h2>Прослушайте произведение:</h2> 
+                <audio controls id="audioPlayer" src="Full/tabs/ARPEGGIOPRACTICE.mp3">
+                    <a href="Full/tabs/ARPEGGIOPRACTICE.mp3"></a>
+                </audio>
+            </figure>
+            <div id="metronome" style="margin-left: -150px; margin-top: 35px;">
+                <button id="metronome-toggle"><img src="Full/tabs/метроном.png" alt="Metronome" width="60px" height="60px"></button>
+                <div id="metronome-menu">
+                    <div class="col-md-6">
+                        <input type="number" id="tempo-input" placeholder="Темп" value="120">
+                    </div>
+                    <div class="col-md-6">
+                        <button id="start-stop-button"><img src="Full/tabs/пуск.png" alt="Play"></button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <div id="iframe-container">
+        <iframe id="pdfViewer" src="Full/tabs/ARPEGGIOPRACTICE.pdf" width="100%" height="800px" allow="autoplay"></iframe>  
+    </div>
+    </div>
+    
+      
     </div>
   </div>
 

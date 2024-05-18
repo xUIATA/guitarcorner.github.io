@@ -189,3 +189,4 @@ function updateMarker1() {
 
 audioPlayer.ontimeupdate = updateMarker;
 audioPlayer1.ontimeupdate = updateMarker1;
+
